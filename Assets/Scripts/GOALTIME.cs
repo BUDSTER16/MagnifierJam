@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GOALTIME : MonoBehaviour
 {
+
+    public string nextScene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +25,7 @@ public class GOALTIME : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("EZ WIN");
+            SceneManager.LoadScene(nextScene);
         }
     }
 }

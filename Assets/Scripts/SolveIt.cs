@@ -58,5 +58,10 @@ public class SolveIt : MonoBehaviour
         {
             rb.AddForce(yump, ForceMode2D.Impulse);
         }
+
+        if(rb.velocity == Vector2.zero)
+        {
+            Debug.Log("RANDOM STOPPAGE");
+        }
     }
 }

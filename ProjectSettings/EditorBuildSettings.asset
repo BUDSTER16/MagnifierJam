@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelSPEED.unity
     guid: fa28b4de1d40dc6478c2365390b21b27
+  - enabled: 1
+    path: Assets/Scenes/LevelBounce.unity
+    guid: d50cadbbd98d6a94b80d7ee9bd9d5271
   m_configObjects: {}

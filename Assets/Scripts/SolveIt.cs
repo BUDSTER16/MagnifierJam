@@ -5,7 +5,7 @@ using UnityEngine;
 public class SolveIt : MonoBehaviour
 {
     Rigidbody2D rb;
-    public float speed = 15;
+    public float speed = 5;
     public ContactFilter2D contactfilter;
     Vector2 dir = new Vector2(1,-1.5f);
     float headHeight = 0.5f;
@@ -50,22 +50,11 @@ public class SolveIt : MonoBehaviour
         else if(onGround.collider != null)
         {
             rb.velocity = Vector2.zero;
-            Debug.Log("SOMETHING IN FRONT OF ME RAAAH");
-        }
-
-        if (onGround.collider == null)
-        {
-            Debug.Log("IN AIR");
         }
         
         if (lookAhead.collider == null && onGround.collider != null)
         {
             rb.AddForce(yump, ForceMode2D.Impulse);
-        }
-
-        if(rb.velocity == Vector2.zero)
-        {
-            Debug.Log("RANDOM STOPPAGE");
         }
     }
 }

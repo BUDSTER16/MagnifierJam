@@ -47,7 +47,7 @@ public class SpeedBeam : MonoBehaviour
                 playerRB.AddForce(boost, ForceMode2D.Force);
                 Debug.Log("vroom");
             }
-            else if (playerRB.velocity.magnitude >= 300)
+            else if (playerRB.velocity.magnitude >= 10)
             {
                 playerRB.AddForce(-boost * 4f, ForceMode2D.Force);
                 Debug.Log("SLOW AS FUCK");

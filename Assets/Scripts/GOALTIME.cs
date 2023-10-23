@@ -20,7 +20,6 @@ public class GOALTIME : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.gameObject.SetActive(false);
             Debug.Log("EZ WIN");
         }
     }

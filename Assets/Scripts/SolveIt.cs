@@ -22,11 +22,11 @@ public class SolveIt : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 head = transform.position;
-        Vector3 dirTest = new Vector3(transform.position.x, transform.position.y, 1);
+        Vector3 head = this.transform.position;
+        Vector3 dirTest = new Vector3(this.transform.position.x, this.transform.position.y, 1);
         head.y += headHeight;
 
-        Vector3 foot = transform.position;
+        Vector3 foot = this.transform.position;
         foot.y -= headHeight - 0.25f;
 
         LayerMask mask = LayerMask.GetMask("Terrain");
@@ -38,7 +38,7 @@ public class SolveIt : MonoBehaviour
         RaycastHit2D lookAhead = Physics2D.Raycast(head, dir, 2, mask);
         Debug.DrawRay(head, dir, Color.red, 0, false);
 
-        RaycastHit2D onGround = Physics2D.Raycast(transform.position, -Vector2.up, 0.6f, mask);
+        RaycastHit2D onGround = Physics2D.Raycast(this.transform.position, -Vector2.up, 0.6f, mask);
         Debug.DrawRay(dirTest, -Vector2.up, Color.green, 0, false);
 
         movement.x = speed;
@@ -50,6 +50,7 @@ public class SolveIt : MonoBehaviour
         else if(onGround.collider != null)
         {
             rb.velocity = Vector2.zero;
+            Debug.Log("SOMETHING IN FRONT OF ME RAAAH");
         }
 
         

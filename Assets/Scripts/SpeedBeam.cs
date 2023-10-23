@@ -7,10 +7,24 @@ public class SpeedBeam : MonoBehaviour
 
     public bool fast = false;
 
+    public Sprite speedUp;
+    public Sprite speedDown;
+
+    SpriteRenderer objectSprite;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        objectSprite= GetComponent<SpriteRenderer>();
+
+        if (fast)
+        {
+            objectSprite.sprite = speedUp;
+        }
+        else
+        {
+            objectSprite.sprite = speedDown;
+        }
     }
 
     // Update is called once per frame
@@ -26,16 +40,22 @@ public class SpeedBeam : MonoBehaviour
         if (other.tag == "Player")
         {
             Vector3 boost = new Vector3(150, 0, 0);
-            Debug.Log("vroom");
             Rigidbody2D playerRB = other.gameObject.GetComponent<Rigidbody2D>();
 
             if (fast)
             {
                 playerRB.AddForce(boost, ForceMode2D.Force);
+                Debug.Log("vroom");
+            }
+            else if (playerRB.velocity.magnitude >= 300)
+            {
+                playerRB.AddForce(-boost * 4f, ForceMode2D.Force);
+                Debug.Log("SLOW AS FUCK");
             }
             else
             {
-                playerRB.AddForce(-boost, ForceMode2D.Force);
+                playerRB.AddForce(-boost * 1.5f, ForceMode2D.Force);
+                Debug.Log("SLOWED");
             }
             
         }
@@ -46,10 +66,12 @@ public class SpeedBeam : MonoBehaviour
         if(fast)
         {
             fast = false;
+            objectSprite.sprite = speedDown;
         }
         else
         {
             fast = true;
+            objectSprite.sprite = speedUp;
         }
     }
 }

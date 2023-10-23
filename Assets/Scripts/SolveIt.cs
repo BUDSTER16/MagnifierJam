@@ -53,6 +53,10 @@ public class SolveIt : MonoBehaviour
             Debug.Log("SOMETHING IN FRONT OF ME RAAAH");
         }
 
+        if (onGround.collider == null)
+        {
+            Debug.Log("IN AIR");
+        }
         
         if (lookAhead.collider == null && onGround.collider != null)
         {

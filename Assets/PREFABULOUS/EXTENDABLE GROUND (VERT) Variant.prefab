@@ -69,6 +69,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8106746907861033621, guid: 358a6a4b2d0b8114898634c4b7a1d6cb, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8106746907861033621, guid: 358a6a4b2d0b8114898634c4b7a1d6cb, type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode
       value: 1
       objectReference: {fileID: 0}

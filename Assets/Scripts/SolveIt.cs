@@ -25,16 +25,34 @@ public class SolveIt : MonoBehaviour
         Vector3 head = transform.position;
         Vector3 dirTest = new Vector3(transform.position.x, transform.position.y, 1);
         head.y += headHeight;
+
+        Vector3 foot = transform.position;
+        foot.y -= headHeight - 0.25f;
+
         LayerMask mask = LayerMask.GetMask("Terrain");
+
+        RaycastHit2D obstacle = Physics2D.Raycast(foot, Vector2.right, 1, mask);
+        Debug.DrawRay(foot, Vector2.right, Color.magenta, 0, false);
+
+
         RaycastHit2D lookAhead = Physics2D.Raycast(head, dir, 2, mask);
         Debug.DrawRay(head, dir, Color.red, 0, false);
+
         RaycastHit2D onGround = Physics2D.Raycast(transform.position, -Vector2.up, 0.6f, mask);
         Debug.DrawRay(dirTest, -Vector2.up, Color.green, 0, false);
 
         movement.x = speed;
 
-        rb.AddForce(movement, ForceMode2D.Force);
+        if (obstacle.collider == null)
+        {
+            rb.AddForce(movement, ForceMode2D.Force);
+        }
+        else if(onGround.collider != null)
+        {
+            rb.velocity = Vector2.zero;
+        }
 
+        
         if (lookAhead.collider == null && onGround.collider != null)
         {
             rb.AddForce(yump, ForceMode2D.Impulse);

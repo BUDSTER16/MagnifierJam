@@ -45,7 +45,7 @@ public class AudioManager : MonoBehaviour
         if (audioBreak <= 0)
         {
             audioSource.PlayOneShot(clip);
-            audioBreak = 3;
+            audioBreak = 2;
         }
 
     }

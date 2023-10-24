@@ -66,6 +66,12 @@ public class Menus : MonoBehaviour
         SceneManager.LoadScene(sceneName: "LevelFINAL");
     }
 
+    public void OpenCredits()
+    {
+        SceneManager.LoadScene(sceneName: "CREDITO");
+    }
+
+
     public void Pause()
     {
         Time.timeScale = 0;

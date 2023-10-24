@@ -205,8 +205,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1504658446}
-        m_TargetAssemblyTypeName: Menus, Assembly-CSharp
+      - m_Target: {fileID: 1687473849}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -337,8 +337,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1504658446}
-        m_TargetAssemblyTypeName: Menus, Assembly-CSharp
+      - m_Target: {fileID: 1687473849}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -469,8 +469,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1504658446}
-        m_TargetAssemblyTypeName: Menus, Assembly-CSharp
+      - m_Target: {fileID: 1687473849}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: LevelSelecter
         m_Mode: 1
         m_Arguments:
@@ -840,7 +840,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7503b266aad52824aa96dfc0f28a9923, type: 3}
---- !u!1 &1504658445
+--- !u!1 &1687473848
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -848,56 +848,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1504658447}
-  - component: {fileID: 1504658446}
-  - component: {fileID: 1504658448}
+  - component: {fileID: 1687473850}
+  - component: {fileID: 1687473849}
   m_Layer: 0
-  m_Name: MenuManagement
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1504658446
+--- !u!114 &1687473849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504658445}
+  m_GameObject: {fileID: 1687473848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c91113ab9ac48943b4d2a0d36596e89, type: 3}
+  m_Script: {fileID: 11500000, guid: ac7035bacb556244a89ae277effebcd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1504658447
+  canvas: {fileID: 435751687}
+  crosshair: {fileID: 2800000, guid: 90d12c9e88d2b6746a02a147963ccc43, type: 3}
+--- !u!4 &1687473850
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504658445}
+  m_GameObject: {fileID: 1687473848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1166.597, y: 521.67194, z: -6.6933913}
+  m_LocalPosition: {x: 1029.4446, y: 519.7953, z: -5.884287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1504658448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504658445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8999372392ba48541bbd2e960a124c76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshair: {fileID: 2800000, guid: 90d12c9e88d2b6746a02a147963ccc43, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -905,5 +893,5 @@ SceneRoots:
   - {fileID: 703147952}
   - {fileID: 435751691}
   - {fileID: 1218075272}
-  - {fileID: 1504658447}
   - {fileID: 1299976303}
+  - {fileID: 1687473850}

@@ -11,6 +11,7 @@ public class SpeedBeam : MonoBehaviour
     public Sprite speedDown;
 
     [SerializeField] private AudioClip clipRev;
+    [SerializeField] private AudioClip clipMag;
 
     SpriteRenderer objectSprite;
 
@@ -75,6 +76,7 @@ public class SpeedBeam : MonoBehaviour
         {
             fast = true;
             objectSprite.sprite = speedUp;
+            AudioManager.instance.playLoudSound(clipMag);
         }
     }
 }

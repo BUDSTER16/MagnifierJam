@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+//using Unity.VisualScripting;
 //using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -68,11 +69,16 @@ public class SolveIt : MonoBehaviour
         {
             Debug.Log("SMTH IN FRONT, IM STOPPED");
         }
+
+        if (this.transform.position.y <= -5)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R)) 
+        if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

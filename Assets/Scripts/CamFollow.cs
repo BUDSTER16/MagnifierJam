@@ -5,12 +5,11 @@ using UnityEngine;
 public class CamFollow : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform target;
-    public Vector3 offset;
+    public Transform camera;
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.position.x + offset.x, target.position.y + offset.y, target.position.z);
+        transform.position = camera.transform.position + new Vector3(0, 0, 5);
     }
 }

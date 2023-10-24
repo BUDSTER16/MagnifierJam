@@ -19,9 +19,9 @@ public class MagBounce : MonoBehaviour
     GameObject trigger;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        trigger = GameObject.Find("JUMPER");
+        trigger = transform.GetChild(0).gameObject;
 
         initialScale.y = transform.localScale.y;
         initialScale.x = transform.localScale.x;

@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Level1
+  clip: {fileID: 8300000, guid: 0c96296999a34e041959c75a63eccaf7, type: 3}
 --- !u!50 &7083273784673605843
 Rigidbody2D:
   serializedVersion: 4

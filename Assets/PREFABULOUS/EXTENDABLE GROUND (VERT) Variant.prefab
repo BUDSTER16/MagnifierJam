@@ -9,6 +9,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1398092428781505103, guid: 358a6a4b2d0b8114898634c4b7a1d6cb, type: 3}
+      propertyPath: clipMag
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f556b7bd16fc3e4a930b48db49ed8da, type: 3}
+    - target: {fileID: 1398092428781505103, guid: 358a6a4b2d0b8114898634c4b7a1d6cb, type: 3}
+      propertyPath: clipRev
+      value: 
+      objectReference: {fileID: 8300000, guid: de5efc77f021f2147a4736a886a1601c, type: 3}
+    - target: {fileID: 1398092428781505103, guid: 358a6a4b2d0b8114898634c4b7a1d6cb, type: 3}
       propertyPath: verticallyScaling
       value: 1
       objectReference: {fileID: 0}

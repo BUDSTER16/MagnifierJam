@@ -33,6 +33,7 @@ public class MagBounce : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log("CLICKED THE FUCKER");
         if (extended == false)
         {
             AudioManager.instance.playLoudSound(clipMag);

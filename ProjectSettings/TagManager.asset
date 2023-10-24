@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Background
   - SpeedBeam
-  - Canvas
   layers:
   - Default
   - TransparentFX

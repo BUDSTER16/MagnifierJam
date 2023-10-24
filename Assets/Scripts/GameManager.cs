@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
-    [SerializeField] GameObject pauseMenu;
+    public GameObject canvas;
 
     public Texture2D crosshair;
 
@@ -19,38 +19,30 @@ public class GameManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
 
+    // Start is called before the first frame update
+    void Start()
+    {
         Vector2 cursorOffset = new Vector2(crosshair.width / 2, crosshair.height / 2);
         Cursor.SetCursor(crosshair, cursorOffset, CursorMode.Auto);
     }
 
-
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Instance.Pause();
+            Time.timeScale = 0;
+            Debug.Log("PAUSED MF");
+            canvas.SetActive(true);
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Instance.ResumeGame();
-        }
-    }
-
-    public void Pause()
-    {
-        Time.timeScale = 0;
-        Debug.Log("PAUSED MF");
-
-
-        pauseMenu.SetActive(true);
-
     }
 
     public void StartGame()
@@ -102,7 +94,7 @@ public class GameManager : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        pauseMenu.SetActive(false);
+        canvas.SetActive(false);
     }    
 
 

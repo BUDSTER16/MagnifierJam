@@ -29,7 +29,6 @@ public class Menus : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
     }
 
     public void LevelSelecter()

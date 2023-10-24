@@ -1,10 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Menus : MonoBehaviour
 {
+
+
+    private void Update()
+    {
+       if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
+        {
+            Pause();
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Resume();
+        }
+    }
+
 
     public void StartGame()
     {
@@ -50,6 +65,16 @@ public class Menus : MonoBehaviour
     public void LevelFinal()
     {
         SceneManager.LoadScene(sceneName: "LevelFINAL");
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
     }
 
 }

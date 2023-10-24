@@ -145,3 +145,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticallyScaling: 0
   extAmount: 1.5
+  clipMag: {fileID: 8300000, guid: 8f556b7bd16fc3e4a930b48db49ed8da, type: 3}
+  clipRev: {fileID: 8300000, guid: de5efc77f021f2147a4736a886a1601c, type: 3}

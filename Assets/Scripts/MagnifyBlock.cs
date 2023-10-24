@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class MagnifyBlock : MonoBehaviour
 {
     bool extended = false;
     public bool verticallyScaling = true;
     public float extAmount = 1.0f;
+
+    [SerializeField] private AudioClip clipMag;
+    [SerializeField] private AudioClip clipRev;
 
     Vector2 initialScale;
 
@@ -37,10 +41,12 @@ public class MagnifyBlock : MonoBehaviour
     {
         if(extended == false)
         {
+            AudioManager.instance.playSound(clipMag);
             transform.localScale += transformable;
             extended = true;
         }else
         {
+            AudioManager.instance.playSound(clipRev);
             transform.localScale = initialScale;
             extended = false;
         }

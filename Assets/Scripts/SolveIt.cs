@@ -58,6 +58,16 @@ public class SolveIt : MonoBehaviour
         {
             rb.AddForce(yump, ForceMode2D.Impulse);
         }
+
+        if (obstacle.collider == null && rb.velocity.magnitude == 0)
+        {
+            Debug.Log("GIVING A PUSH");
+            Vector3 push = new Vector3(1,1,0);
+            rb.AddForce(push, ForceMode2D.Impulse);
+        }else if(rb.velocity.magnitude == 0)
+        {
+            Debug.Log("SMTH IN FRONT, IM STOPPED");
+        }
     }
 
     private void Update()

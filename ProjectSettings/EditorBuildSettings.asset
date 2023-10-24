@@ -6,24 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/TestArea.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-<<<<<<< Updated upstream
-=======
-  - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 9b122c8d735905a4da0604edaf8eaa4d
-  - enabled: 1
-    path: Assets/Scenes/LevelBeams.unity
-    guid: 7a4be66d31d0665478898545f4f3689e
   - enabled: 1
     path: Assets/Scenes/LevelSPEED.unity
     guid: fa28b4de1d40dc6478c2365390b21b27
   - enabled: 1
+    path: Assets/Scenes/LevelFINAL.unity
+    guid: b22417a13cab75a469db04cf569a304b
+  - enabled: 1
     path: Assets/Scenes/LevelBounce.unity
     guid: d50cadbbd98d6a94b80d7ee9bd9d5271
   - enabled: 1
-    path: Assets/Scenes/LevelFINAL.unity
-    guid: b22417a13cab75a469db04cf569a304b
->>>>>>> Stashed changes
+    path: Assets/Scenes/LevelBeams.unity
+    guid: 7a4be66d31d0665478898545f4f3689e
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 9b122c8d735905a4da0604edaf8eaa4d
   m_configObjects: {}

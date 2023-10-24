@@ -1561,6 +1561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpeedBeam
       objectReference: {fileID: 0}
+    - target: {fileID: 8345810815719667787, guid: eea7faf7b0341254380b0c0f612df57c, type: 3}
+      propertyPath: fast
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

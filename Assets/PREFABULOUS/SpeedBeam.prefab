@@ -174,3 +174,4 @@ MonoBehaviour:
   fast: 0
   speedUp: {fileID: 21300000, guid: 0d8cc8d7e540a624dbd53ea45d57b407, type: 3}
   speedDown: {fileID: 21300000, guid: 8d39992045d008849a0f99affe37afa1, type: 3}
+  clipRev: {fileID: 8300000, guid: de5efc77f021f2147a4736a886a1601c, type: 3}

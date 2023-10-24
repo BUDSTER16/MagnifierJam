@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GOALTIME : MonoBehaviour
 {
-
     public string nextScene;
+    [SerializeField] private AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class GOALTIME : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("EZ WIN");
+            AudioManager.instance.playSound(clip);  
             SceneManager.LoadScene(nextScene);
         }
     }

@@ -10,6 +10,8 @@ public class SpeedBeam : MonoBehaviour
     public Sprite speedUp;
     public Sprite speedDown;
 
+    [SerializeField] private AudioClip clipRev;
+
     SpriteRenderer objectSprite;
 
     // Start is called before the first frame update
@@ -67,6 +69,7 @@ public class SpeedBeam : MonoBehaviour
         {
             fast = false;
             objectSprite.sprite = speedDown;
+            AudioManager.instance.playLoudSound(clipRev);
         }
         else
         {

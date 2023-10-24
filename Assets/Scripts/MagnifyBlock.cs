@@ -41,12 +41,12 @@ public class MagnifyBlock : MonoBehaviour
     {
         if(extended == false)
         {
-            AudioManager.instance.playSound(clipMag);
+            AudioManager.instance.playLoudSound(clipMag);
             transform.localScale += transformable;
             extended = true;
         }else
         {
-            AudioManager.instance.playSound(clipRev);
+            AudioManager.instance.playLoudSound(clipRev);
             transform.localScale = initialScale;
             extended = false;
         }

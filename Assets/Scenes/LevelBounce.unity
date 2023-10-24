@@ -3759,8 +3759,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a6d39de171ffaa48af9138649e4a71b, type: 3}
-<<<<<<< HEAD
-=======
 --- !u!1 &1870049973
 GameObject:
   m_ObjectHideFlags: 0
@@ -3894,7 +3892,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870049973}
   m_CullTransparentMesh: 1
->>>>>>> parent of 97e95aa (Gay)
 --- !u!1001 &1884442519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4404,13 +4401,5 @@ SceneRoots:
   - {fileID: 5729465919239631094}
   - {fileID: 1434402952}
   - {fileID: 1634447781}
-<<<<<<< HEAD
-  - {fileID: 861263436}
-  - {fileID: 2035868381}
-  - {fileID: 855520118}
-  - {fileID: 496904817}
-  - {fileID: 803598714}
-=======
   - {fileID: 2066151504}
   - {fileID: 427740403}
->>>>>>> parent of 97e95aa (Gay)

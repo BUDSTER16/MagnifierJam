@@ -1,49 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class Menus : MonoBehaviour
 {
 
-    public static GameManager Instance;
 
-    public GameObject canvas;
-
-    public Texture2D crosshair;
-
-
-    private void Awake()
+    private void Update()
     {
-        if(Instance == null)
+       if(Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            Pause();
         }
-        else
+        else if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Destroy(gameObject);
+            Resume();
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Vector2 cursorOffset = new Vector2(crosshair.width / 2, crosshair.height / 2);
-        Cursor.SetCursor(crosshair, cursorOffset, CursorMode.Auto);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            Time.timeScale = 0;
-            Debug.Log("PAUSED MF");
-            canvas.SetActive(true);
-        }
-    }
 
     public void StartGame()
     {
@@ -91,11 +67,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName: "LevelFINAL");
     }
 
-    public void ResumeGame()
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
     {
         Time.timeScale = 1;
-        canvas.SetActive(false);
-    }    
-
+    }
 
 }

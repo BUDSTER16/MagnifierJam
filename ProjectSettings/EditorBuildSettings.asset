@@ -6,6 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/MainMenu.unity
     guid: 9015aeb38e305f44bb5c404bd9af2315
   - enabled: 1
@@ -15,6 +16,8 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: 94b0a6886170f4c46b6df37c94f03a77
   - enabled: 1
+=======
+>>>>>>> parent of 8f95d33 (UI Menu Elements)
     path: Assets/Scenes/TestArea.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

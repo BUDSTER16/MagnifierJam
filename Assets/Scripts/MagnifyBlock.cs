@@ -5,7 +5,7 @@ using UnityEngine.Timeline;
 
 public class MagnifyBlock : MonoBehaviour
 {
-    bool extended = false;
+    public bool extended = false;
     public bool verticallyScaling = true;
     public float extAmount = 1.0f;
 
@@ -28,6 +28,11 @@ public class MagnifyBlock : MonoBehaviour
         }else
         {
             transformable.x = extAmount;
+        }
+
+        if (extended)
+        {
+            transform.localScale += transformable;
         }
     }
 
